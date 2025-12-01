@@ -1,0 +1,118 @@
+| Step | Playwright Topic / Feature     | Description / Subtopics                                           | Covered? |
+| ---- | ------------------------------ | ----------------------------------------------------------------- | -------- |
+| 1    | Getting Started & Install      | Install Playwright, basic project setup, initializing framework   |          |
+| 2    | Supported Languages & Browsers | JS, TS, Python, Java, C#; Chrome, Firefox, WebKit                 |          |
+| 3    | Writing First Test             | Basic syntax, open page, assert title                             |          |
+| 4    | Locators & Selectors           | Powerful Locator API, robust selectors, roles, text, filters      |          |
+| 5    | Auto-Waiting & Stability       | Built-in waits, reduce flakiness, less manual waiting             |          |
+| 6    | Parallel Test Execution        | Running tests in parallel, worker threads, configuration          |          |
+| 7    | Browser Contexts & Isolation   | Isolated sessions, multiple users, same browser instance          |          |
+| 8    | Network Interception & Mocking | Intercept requests, simulate APIs, mock responses, offline mode   |          |
+| 9    | Mobile & Device Emulation      | Emulate phones/tablets, geolocation, permissions, device profiles |          |
+| 10   | Frames & Shadow DOM            | Handle nested iframes, shadow DOM, complex UIs                    |          |
+| 11   | Codegen (Test Generator)       | Generate scripts automatically from user actions                  |          |
+| 12   | Assertions & Test Assertions   | Powerful, auto-waiting assertions                                 |          |
+| 13   | Multi-page/Multi-tab Flows     | Automate navigation, pop-ups, new tabs                            |          |
+| 14   | Video & Screenshot Support     | Capture screenshots, record video of test runs                    |          |
+| 15   | Trace Viewer & Debugging       | Step-through recordings, logs, timeline debugging                 |          |
+| 16   | Reporters & CI Integration     | HTML, JSON, JUnit reports, integration with CI/CD pipelines       |          |
+| 17   | Test Tagging & Filtering       | Annotations, categories, running by tag or name                   |          |
+| 18   | Advanced Automation APIs       | Mouse/keyboard events, complex user simulation, trusted events    |          |
+| 19   | Extending Playwright           | Custom reporters, plugin support, advanced config                 |          |
+| 20   | Best Practices & Maintenance   | Test structure, flake management, scaling, avoiding anti-patterns |          |
+
+
+Can you make introduction of mine in simple english which incudes the 
+
+----------------------------------------ss------------------------------------------
+relative xpath = to create for locator the elements 
+example
+input have many attributes so we can create xpath from any itfor ex //input[@type='user name']
+
+for use of many attribute at same time example =//input[@type='submit' and @value='search'] 
+
+
+
+
+
+it is for the table and stock market sites example
+//td[text()='Ben']/ancestor::tr/td[3] for tablets
+https://rahulshettyacademy.com/AutomationPractice/
+
+ANCESTOR keyword
+//td[text()='name']/ancestor::tr/td[3]
+//td[text()='Alex']/ancestor::tr/td[4] 
+
+FOLLOWING same as ancestor but donot uppward go downward indexing
+//div[text()="Cierra"]/following::span[@id="delete-record-1"]
+
+
+https://practice.qabrains.com/ecommerce/login 
+
+
+------------------------------------------------------------------------------------------------------
+
+| Step | Playwright Concept                 | Key Features/Types                                                                     | Description                                                                                                                              | Covered? |
+| ---- | ---------------------------------- | -------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| 1    | Locators                           | getByRole, getByText, getByLabel, getByPlaceholder, getByAltText, getByTestId, filter  | Find and interact with page elements reliably—supports roles, text, labels, ARIA, chained filtering for precision .                      |          |
+| 2    | Locator Operators & Chaining       | filter, nth, first, last, locator inside locator                                       | Refine element searches and build stable, readable locator chains .                                                                      |          |
+| 3    | Assertions (Expect API)            | toBeVisible, toHaveText, toBeChecked, toBeEnabled, Soft & Hard Assertions, .not        | Validate UI, content, page state, network; built-in retry mechanism reduces flakiness, supports negative and async assertions .          |          |
+| 4    | Actions                            | click, dblclick, fill, type, press, hover, dragTo, check, uncheck, clear, selectOption | Simulate user input—mouse/touch events, keyboard typing, file uploads, drag & drop; supports both high-level and granular interactions . |          |
+| 5    | Auto-Waiting & Actionability       | auto-wait, stable, visible, enabled, receives events                                   | All actions and assertions auto-wait for elements to be actionable—reduces need for manual waits .                                       |          |
+| 6    | Trusted Events & Real Interactions | hover, click, type, interact with dynamic elements                                     | Playwright-generated events mimic real user interaction, handling dynamics and complex controls .                                        |          |
+
+
+
+
+-----------------------Introduction -----------------------------------------------------------------------------
+I am ANkit Singh i have done BCA from Galgotias unversity and MCA from IMS ghazibad.So i have around 5 years of expirence in IT industry Currently i have working as QA enginner in i3infosoft PVT ltd 
+In which i have daily routine to check the high priorty ticket assigned to me.So we have daily standup meeting around 15 minutes to discuss what will do today and what was done yesterday.Then we have Sprint Planning in which Project Owner ,QA team,developer is present to discuss how many task should create.Then we have Sprint Restrospective meeting after completing the One Sprint to discuss what point should improve.Then we have Sprint review meeting in which we have to discuss what are the remaing task should transfer to next sprint.
+So  when the New project came we have to follow the Software Testing Life Cycle where we have to organise the sequece of testing.
+First we have to Required the infromation for what will be the modules for testing in project. Then second we have Test Planning in that we what kind of test case according to Requrenment analysies.Then we have test Case desgin in that we have to create detailed test cases for project.Then we have to setup the test enviornment like Local ,QA enviornment for testing.Then we have Test case execution in which we have to execute the test Cases on QA enviornment.Then Manager have to Sign off that project.
+So we have related to the Testing we have 
+Smoke testing After new build we have test the basic funcionality of the web application.
+Then we have Sanity testing in which we hve to test the main funcionality is working or not.
+We have the Re-testing in which we have to test the faialed status test case after the bug fixes.
+we have Regression testing After the deployment of build we have to test the dependent funcionality was working or not we have types of regression:-
+First Unit regression we have to test only the modification module.
+then Regional regression we have to test the imapacted module and modification module also.
+Then full regression we have to test the Main funcionality and the remaing part of the Application.
+
+Then we have the API testing also in which have several methods of Request API For testing 
+First Get request  to get the data form API.
+second POST reqest to create the data in Database.
+PUT and PATCH to update the data .
+then delete request to delet from data.
+
+
+
+My name is Ankit Singh. I completed my BCA from Galgotias University and MCA from IMS Ghaziabad. I have around five years of experience in the IT industry. Currently, I am working as a QA Engineer at i3infosoft Pvt Ltd.
+
+Daily Workflow
+I check high-priority tickets assigned to me each day.
+We have a daily stand-up meeting for about 15 minutes to discuss what was done yesterday and what will be done today.
+Sprint planning meetings are held with the Project Owner, QA team, and developers to decide how many tasks to create.
+After completing one sprint, we have a Sprint Retrospective meeting to discuss what points should be improved.
+Sprint Review meetings are conducted to discuss which tasks remain and need to be moved to the next sprint.
+Software Testing Life Cycle
+When a new project starts, we follow the Software Testing Life Cycle:
+Gather information about the modules for testing.
+Test Planning: Decide what kind of test cases are needed according to the requirement analysis.
+Test Case Design: Create detailed test cases for the project.
+Test Environment Setup: Prepare environments like Local and QA for testing.
+Test Case Execution: Execute test cases on the QA environment.
+Project Sign-off: The manager reviews and signs off the project.
+Types of Testing
+Smoke Testing: After a new build, test the basic functionality of the web application.
+Sanity Testing: Check if the main functionalities are working or not.
+Re-testing: Retest failed test cases after bug fixes.
+Regression Testing: After each build deployment, check whether dependent functionalities work. There are three types of regression:
+Unit Regression: Test only the modified module.
+Regional Regression: Test both the impacted and the modified modules.
+Full Regression: Test the main functionalities and the remaining parts of the application.
+API Testing
+GET request: Retrieve data from the API.
+POST request: Create data in the database.
+PUT and PATCH requests: Update existing data.
+DELETE request: Remove data from the database.
+
