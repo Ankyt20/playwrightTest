@@ -75,17 +75,21 @@ test('dynamic properties',async({page}) => {
 });
 test('alerts',async({page})=>{
     await page.goto('https://demoqa.com/alerts');
+    await page.waitForTimeout(4000);
     await page.once('dialog', async dialog => {
-        // await page.waitForTimeout(2000);
-        
+        // await page.screenshot({ path: 'screenshots/popupScreenshot.png',fullPage:true});
         await dialog.accept(); 
         
     });
     // await page.screenshot({ path: 'screenshot.png'});
     
-        
+    //   await page.waitForTimeout(2000);
+    //     await page.screenshot({ path: 'screenshots/popupScreenshot.png',fullPage:true}); 
+    await page.waitForTimeout(4000);  
     await page.locator('//button[@id="alertButton"]').click();
-    await page.screenshot({ path: 'screenshots/popupScreenshot.png',fullPage:true});
+     await page.waitForTimeout(4000);
+    
+    // await page.screenshot({ path: 'screenshots/popupScreenshot.png',fullPage:true});
     
     // await page.waitForTimeout(3000);\ page.on('dialog', dialog => dialog.accept());
     

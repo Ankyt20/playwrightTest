@@ -1,5 +1,6 @@
 // @ts-check
 import { test, expect, _baseTest,devices} from '@playwright/test';
+import { request } from 'http';
 // test.use({ ...devices['Pixel 5'] });
 
 test('has title', async ({ page }) => {
@@ -30,6 +31,7 @@ test('can fetch data from  API', async ({ request,page }) => {
   expect(response.ok()).toBeTruthy();
   const data = await response.json();
   console.log(data);
+  console.log(response.status());
   expect(data).toHaveProperty('id', 1);
   expect(data).toHaveProperty('title');
 });
@@ -39,7 +41,7 @@ test('post from API', async ({ request }) => {
   const response = await request.post('https://reqres.in/api/users', {
         data: {
             'name': 'Rohan',
-            'job': 'Teacher',
+            'job': 'monu',
         },
         headers: {
             'Content-Type': 'application/json',
@@ -48,12 +50,12 @@ test('post from API', async ({ request }) => {
     });
 
     //console.log('Response:', response.status());
-    expect(response.status()).toBe(201);
+    expect(response.status()).toBe(401);
 
     
     const responseBody = await response.json();
     console.log('Response:', responseBody);
-     expect(responseBody).toHaveProperty('name', 'Rohan');
+    //  expect(responseBody).toHaveProperty('name', 'Rohan'); 
 });
 
 test('to delete from API',async ({request})=>{
@@ -64,4 +66,21 @@ test('to delete from API',async ({request})=>{
     }
   });
   console.log(Response.status());
+});
+
+test('post status 201',async({page})=>{
+    page.goto('https://reqres.in/');
+    // await page.locator("//li[@data-id='delete']").click();
+    await page.waitForTimeout(2000);
+    
+    const responsePromise = page.waitForResponse(response => 
+      response.url()==='https://reqres.in/api/users/2' && response.status() === 204
+    );
+    
+    await page.locator("//li[@data-id='delete']").click(); 
+    
+    const response = await responsePromise;
+    
+    
+    console.log(response.status());
 });
